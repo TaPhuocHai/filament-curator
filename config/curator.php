@@ -60,5 +60,5 @@ return [
     'multi_select_key' => 'metaKey',
     'table' => [
         'layout' => 'grid',
-    ]
+    ],
 ];
