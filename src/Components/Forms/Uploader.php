@@ -113,9 +113,9 @@ class Uploader extends FileUpload
                 $exif = $image->exif();
             }
 
-            if (Storage::disk($component->getDiskName())->exists(ltrim($component->getDirectory() . '/' . $filename . '.' . $extension, '/'))) {
+            // if (Storage::disk($component->getDiskName())->exists(ltrim($component->getDirectory() . '/' . $filename . '.' . $extension, '/'))) {
                 $filename = $filename . '-' . time();
-            }
+            // }
 
             $path = $file->{$storeMethod}(
                 $component->getDirectory(),
