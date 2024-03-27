@@ -139,6 +139,10 @@ class CuratorPanel extends Component implements HasActions, HasForms
         }
     }
 
+    public function closeModel() {
+        $this->dispatch('close-modal', id: $this->modalId ?? 'curator-panel');
+    }
+
     public function form(Form $form): Form
     {
         if ($this->maxItems) {

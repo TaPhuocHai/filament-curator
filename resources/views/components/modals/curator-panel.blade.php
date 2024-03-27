@@ -82,6 +82,15 @@
                 <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z" fill="currentColor"></path>
             </svg>
         </label>
+        <div class="flex items-center gap-2">
+            <x-filament::button
+                size="xs"
+                color="gray"
+                x-on:click="$wire.closeModel()"
+            >
+                {{ trans('curator::views.panel.close') }}
+            </x-filament::button>        
+        </div>
     </div>
     <!-- End Toolbar -->
 
@@ -89,10 +98,10 @@
 
         <!-- Gallery -->
         <div class="curator-panel-gallery flex-1 h-full overflow-auto p-4">
-            <ul class="curator-picker-grid">
+            <ul class="curator-picker-grid flex gap-2">
                 @forelse ($files as $file)
                     <li
-                        wire:key="media-{{ $file['id'] }}" class="relative aspect-square"
+                        wire:key="media-{{ $file['id'] }}" class="relative aspect-square w-1/3"
                         x-bind:class="{
                             'opacity-40': $wire.selected.length > 0 && !isSelected('{{ $file['id'] }}')
                         }"
