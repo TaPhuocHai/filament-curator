@@ -45,6 +45,7 @@ return [
         'remove' => 'Remove',
         'deselect_all' => 'Deselect All',
         'add_multiple_file' => ':key + Click to select multiple files.',
+        'close' => 'Close',
     ],
     'curation' => [
         'heading' => 'Curating',
