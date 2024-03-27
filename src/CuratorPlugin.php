@@ -82,7 +82,7 @@ class CuratorPlugin implements Plugin
 
     public function getNavigationGroup(): ?string
     {
-        return $this->evaluate($this->navigationGroup) ?? config('curator.resources.navigation_group');
+        return __($this->evaluate($this->navigationGroup) ?? config('curator.resources.navigation_group'));
     }
 
     public function getNavigationIcon(): ?string
